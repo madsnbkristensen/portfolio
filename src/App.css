@@ -1,0 +1,388 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 
+font-family: 'Inter', sans-serif;
+font-family: 'Michroma', sans-serif;
+ */
+
+
+:root {
+  --main-background: #262626;
+  --main-green: #5BE8C1;
+  --main-red: #FD0045;
+  --wave-color: #0E0E0E;
+  --mic-font: 'Michroma', sans-serif;
+  --int-font: 'Inter', sans-serif;
+}
+
+
+body {
+  min-height: 100vh;
+  background-color: var(--main-background);
+}
+
+/*Frontpage*/
+
+.text-switch {
+  color: var(--main-green);
+  font-size: 12px;
+  font-family: var(--int-font);
+  padding: 10px 0;
+}
+
+.intro-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-wrapper h1 {
+  color: white;
+  font-size: 22px;
+  font-weight: 100;
+  font-family: var(--mic-font);
+}
+
+.intro-wrapper h2 {
+  color: var(--main-red);
+  font-size: 18px;
+  font-family: var(--int-font)
+}
+
+.wave {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  z-index: -1;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-green);
+  margin: 30px 0;
+}
+
+.frontpage-img {
+  width: 150px;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.some-icon-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.some-icon {
+  color: var(--main-green);
+  font-size: 50px;
+}
+
+.icon-wrapper p {
+  color: var(--main-red);
+  font-size: 12px;
+  font-family: var(--mic-font);
+}
+
+/*Frontpage end*/
+
+/*aboutpage*/
+.contentpages-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.column-1, .column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.technical-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutpage-sections {
+  margin: 10px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutpage-sections p {
+  color: white;
+  font-size: 12px;
+  font-family: var(--int-font);
+  line-height: 20px;
+}
+
+.content-headline {
+  color: var(--main-green);
+  font-size: 16px;
+  font-family: var(--mic-font);
+  padding: 10px 0;
+}
+
+.about-page-img {
+  width: 100%;
+}
+
+.technical-icons-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.technical-icon {
+  width: 50px;
+}
+
+.resume-btn {
+  font-family: var(--mic-font);
+  background-color: var(--main-green);
+  padding: 10px 10px;
+  border-radius: 20px;
+  border: solid 1px var(--main-background);
+  text-decoration: none;
+  color: var(--main-background);
+  margin-bottom: 30px;
+  font-size: 12px;
+}
+
+.resume-btn:hover {
+  background-color: var(--main-background);
+  color: var(--main-green);
+  border: solid 1px var(--main-green);
+  transition: 0.3s;
+}
+
+/*aboutpage end*/
+
+/*projectspage*/
+.projectpage-main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+/*projectspage end*/
+
+/*contactpage*/
+.contact-info-section {
+  font-family: var(--int-font);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+.contact-info-section p {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-icon {
+  color: var(--main-green);
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.contactpage-img {
+  width: 100%;
+  margin-top: 100px;
+}
+
+
+/* ===== Scrollbar CSS ===== */
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--main-background);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--main-green);
+  border-radius: 10px;
+  border: none
+}
+
+@media only screen and (min-width: 768px) {
+  
+  .aboutpage-sections {
+    width: 70%;
+  }
+  .about-page-img {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+  .contact-info-section {
+    width: 70%;
+    padding: 40px 0;
+  }
+  .contactpage-img {
+    width: 70%;
+    margin-bottom: 100px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .icon-wrapper p{
+    display: none;
+  }
+  .icon-wrapper{
+    width: 500px;
+  
+  }
+  .intro-wrapper {
+    align-items: flex-start;
+    width: 500px;
+  }
+  .homepage-main{
+    width: 85%;
+    max-width: 1225px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    justify-content: center;
+    padding: 100px 50px;
+  }
+  .image-wrapper {
+    position: absolute;
+    top: 0;
+    width: 450px;
+    height: 800px;
+    margin: 0;
+    right: 90px;
+    border-radius: 0 0 1000px 1000px;
+    overflow: hidden;
+    border: none;
+  }
+  .frontpage-img {
+    width: 400px;
+    margin-bottom: -50px;
+  }
+  .text-switch {
+    font-size: 25px;
+    padding: 20px 100px;
+    padding-bottom: 0;
+  }
+  
+  
+  .intro-wrapper h1 {
+    font-size: 45px;
+    margin: auto;
+  }
+  
+  .intro-wrapper h2 {
+    font-size: 30px;
+    padding: 0 100px;
+  }
+  .some-icon-container {
+   gap: 70px;
+  }
+  .some-icon {
+    font-size: 85px;
+  }
+  .contentpages-main{
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .column-1, .column-2 {
+    width: 50%;
+    gap: 20px;
+  }
+  .column-2{
+    flex-direction: column-reverse;
+
+  }
+  .aboutpage-sections {
+    width: 80%;
+    gap: 10px;
+  }
+  .aboutpage-sections p{
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .content-headline {
+    padding: 0;
+    font-size: 22px;
+  }
+  .about-page-img {
+    width: 80%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  .projectpage-main{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    gap: 100px;
+  }
+  .contactpage-img {
+    margin: 0 auto;
+  }
+  .contact-info-section p{
+    font-size: 18px;
+  }
+  .contact-icon {
+    font-size: 60px;
+  }
+  .contact-info-section{
+    width: 80%
+  }
+}
+
+@media only screen and (min-width: 1920px){
+
+  .image-wrapper {
+    right: 300px;
+  }
+  .aboutpage-sections {
+    width: 70%;
+  }
+  .column-1, .column-2 {
+    width: 40%;
+  }
+  .about-page-img {
+    width: 70%;
+    max-height: 350px;
+    object-position: 0 25%;
+    margin-bottom: 0px;
+  }
+  .contact-info-section{
+    width: 70%
+  }
+  .contactpage-img {
+    width: 55%;
+    margin-bottom: 0px;
+  }
+}
