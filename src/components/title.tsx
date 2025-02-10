@@ -5,7 +5,7 @@ interface TitleProps {
 
 export default function Title({ text, tag }: TitleProps) {
   if (tag === "h1") {
-    return <h1 className="text-4xl font-bold text-white">{text}</h1>;
+    return <h1 className="text-5xl font-bold text-white">{text}</h1>;
   } else if (tag === "h2") {
     return <h2 className="text-3xl font-bold text-white">{text}</h2>;
   } else {
