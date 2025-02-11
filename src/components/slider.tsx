@@ -22,8 +22,8 @@ export const Slider = () => {
         setCurrent(0);
         api.scrollTo(0);
       } else {
-        api.scrollNext();
         setCurrent(current + 1);
+        api.scrollNext();
       }
     }, 2000);
   }, [api, current]);
