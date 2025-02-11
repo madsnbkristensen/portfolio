@@ -25,18 +25,18 @@ export const Slider = () => {
         api.scrollNext();
         setCurrent(current + 1);
       }
-    }, 1000);
+    }, 2000);
   }, [api, current]);
 
   return (
-    <div className="w-full py-10 lg:py-40 mx-auto max-w-3xl">
+    <div className="w-[80%] py-8 mx-auto max-w-3xl">
       <div className="container mx-auto">
         <div className="flex flex-col  gap-10">
           <Carousel setApi={setApi} className="w-full">
             <CarouselContent>
-              {Array.from({ length: 15 }).map((_, index) => (
+              {Array.from({ length: 8 }).map((_, index) => (
                 <CarouselItem className="basis-1/4 lg:basis-1/6" key={index}>
-                  <div className="flex rounded-md aspect-square bg-muted items-center justify-center p-6">
+                  <div className="flex rounded-md bg-slate-700 aspect-square bg-muted items-center justify-center p-6">
                     <span className="text-sm">Logo {index + 1}</span>
                   </div>
                 </CarouselItem>

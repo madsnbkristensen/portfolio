@@ -22,19 +22,16 @@ export default function Header() {
     <header
       className={`fixed left-0 right-0 flex justify-center z-50 max-w-3xl mx-auto w-full transition-all ${
         isScrolled ? "top-0" : "top-10"
-      }`}
-    >
+      }`}>
       <div
         className={`bg-slate-700 text-white flex items-center justify-between px-6 rounded-lg transition-all duration-300 ease-in-out ${
-          isScrolled ? "w-[100%] h-10" : "w-[80%] h-16"
-        }`}
-      >
+          isScrolled ? "w-[100%] h-14" : "w-[80%] h-16"
+        }`}>
         {/* Left section - Social icons */}
         <div className="flex items-center gap-4">
           <Link
             href="https://github.com"
-            className="hover:text-slate-300 transition-all"
-          >
+            className="hover:text-slate-300 transition-all">
             <FontAwesomeIcon
               icon={faGithub}
               size={`${isScrolled ? "1x" : "lg"}`}
@@ -42,8 +39,7 @@ export default function Header() {
           </Link>
           <Link
             href="https://linkedin.com"
-            className="hover:text-slate-300 transition-all"
-          >
+            className="hover:text-slate-300 transition-all">
             <FontAwesomeIcon
               icon={faLinkedinIn}
               size={`${isScrolled ? "1x" : "lg"}`}
@@ -57,24 +53,21 @@ export default function Header() {
             href="/tech-stack"
             className={`font-medium hover:text-slate-300 transition-all ${
               isScrolled ? "text-sm" : "text-lg"
-            }`}
-          >
+            }`}>
             TechStack
           </Link>
           <Link
             href="/projects"
             className={`font-medium hover:text-slate-300 transition-all ${
               isScrolled ? "text-sm" : "text-lg"
-            }`}
-          >
+            }`}>
             Projects
           </Link>
           <Link
             href="/about"
             className={`font-medium hover:text-slate-300 transition-all ${
               isScrolled ? "text-sm" : "text-lg"
-            }`}
-          >
+            }`}>
             About me
           </Link>
         </nav>
