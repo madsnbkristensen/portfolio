@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import {
   Carousel,
@@ -28,16 +28,37 @@ export const Slider = () => {
     }, 2000);
   }, [api, current]);
 
+  const logos = [
+    { src: "/logos/c-sharp.svg", title: "C#" },
+    { src: "/logos/js.svg", title: "JavaScript" },
+    { src: "/logos/mongodb.svg", title: "MongoDB" },
+    { src: "/logos/mysql.svg", title: "MySQL" },
+    { src: "/logos/next.svg", title: "Next.js" },
+    { src: "/logos/node.svg", title: "Node.js" },
+    { src: "/logos/php.svg", title: "PHP" },
+    { src: "/logos/react.svg", title: "React" },
+    { src: "/logos/ts.svg", title: "TypeScript" },
+  ];
+
   return (
     <div className="w-[80%] py-8 mx-auto max-w-3xl">
       <div className="container mx-auto">
-        <div className="flex flex-col  gap-10">
+        <div className="flex flex-col gap-10">
           <Carousel setApi={setApi} className="w-full">
             <CarouselContent>
-              {Array.from({ length: 8 }).map((_, index) => (
+              {logos.map((logo, index) => (
                 <CarouselItem className="basis-1/4 lg:basis-1/6" key={index}>
-                  <div className="flex rounded-md bg-slate-700 aspect-square bg-muted items-center justify-center p-6">
-                    <span className="text-sm">Logo {index + 1}</span>
+                  <div className="relative flex h-18 w-18 rounded-md bg-slate-700 aspect-square bg-muted items-center justify-center p-6">
+                    <Image
+                      src={logo.src}
+                      alt={logo.title}
+                      width={100}
+                      height={100}
+                      className="object-contain h-full w-full"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-70 rounded-md flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                      <h3 className="text-white text-center">{logo.title}</h3>
+                    </div>
                   </div>
                 </CarouselItem>
               ))}
