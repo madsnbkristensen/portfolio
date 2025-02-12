@@ -30,14 +30,15 @@ export const Slider = () => {
 
   const logos = [
     { src: "/logos/c-sharp.svg", title: "C#" },
-    { src: "/logos/js.svg", title: "JavaScript" },
-    { src: "/logos/mongodb.svg", title: "MongoDB" },
-    { src: "/logos/mysql.svg", title: "MySQL" },
-    { src: "/logos/next.svg", title: "Next.js" },
     { src: "/logos/node.svg", title: "Node.js" },
+    { src: "/logos/next.svg", title: "Next.js" },
     { src: "/logos/php.svg", title: "PHP" },
+    { src: "/logos/js.svg", title: "JavaScript" },
+    { src: "/logos/git.svg", title: "Git" },
+    { src: "/logos/mysql.svg", title: "MySQL" },
     { src: "/logos/react.svg", title: "React" },
     { src: "/logos/ts.svg", title: "TypeScript" },
+    { src: "/logos/mongodb.svg", title: "MongoDB" },
   ];
 
   return (
@@ -57,7 +58,9 @@ export const Slider = () => {
                       className="object-contain h-full w-full"
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-70 rounded-md flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                      <h3 className="text-white text-center">{logo.title}</h3>
+                      <h3 className="text-white text-center font-bold">
+                        {logo.title}
+                      </h3>
                     </div>
                   </div>
                 </CarouselItem>
