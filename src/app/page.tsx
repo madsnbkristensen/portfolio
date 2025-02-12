@@ -4,6 +4,19 @@ import Image from "next/image";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Slider } from "@/components/slider";
+import projectsData from "@/data/projects.json";
+import Card from "@/components/card";
+
+// Define the type for a project
+export type ProjectType = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+};
+
+// Explicitly type the projects import
+const projects: ProjectType[] = projectsData.projects;
 
 export default function Home() {
   return (
@@ -39,6 +52,20 @@ export default function Home() {
       <section className="w-full mt-20 flex flex-col items-center">
         <Title text="TechStack" tag="h2" />
         <Slider />
+      </section>
+      <section className="w-full mt-20 flex flex-col items-center">
+        <Title text="Projects" tag="h2" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+          {projects.map((project: ProjectType) => (
+            <Card
+              key={project.id}
+              id={project.id}
+              title={project.title}
+              description={project.description}
+              image={project.image}
+            />
+          ))}
+        </div>
       </section>
     </main>
   );
