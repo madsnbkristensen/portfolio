@@ -30,11 +30,11 @@ export default function Home() {
             </p>
           </div>
           <div className="flex justify-start gap-12 mt-8">
-            <Button className="bg-slate-700 w-28 hover:bg-slate-800">
+            <Button className="bg-slate-800 w-28 hover:bg-slate-700">
               My skills
               <FontAwesomeIcon icon={faChevronDown} className="ml-2" />
             </Button>
-            <Button className="bg-slate-700 w-28 hover:bg-slate-800">
+            <Button className="bg-slate-800 w-28 hover:bg-slate-700">
               Contact
             </Button>
           </div>
@@ -66,6 +66,12 @@ export default function Home() {
             />
           ))}
         </div>
+      </section>
+      <section className="w-full mt-20 flex flex-col items-center">
+        <Title text="About me" tag="h2" />
+      </section>
+      <section className="w-full mt-20 flex flex-col items-center">
+        REFERENCER
       </section>
     </main>
   );

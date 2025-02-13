@@ -43,7 +43,7 @@ export const Slider = () => {
 
   return (
     <div className="w-[80%] py-8 mx-auto max-w-3xl">
-      <div className="container mx-auto">
+      <div className="container mx-auto rounded-md overflow-hidden">
         <div className="flex flex-col gap-10">
           <Carousel setApi={setApi} className="w-full">
             <CarouselContent>
