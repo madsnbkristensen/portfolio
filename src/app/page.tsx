@@ -10,9 +10,18 @@ import Card from "@/components/card";
 // Define the type for a project
 export type ProjectType = {
   id: number;
-  title: string;
-  description: string;
-  image: string;
+  title?: string;
+  description?: string;
+  github?: string;
+  website?: string;
+  card_image?: string;
+  image_2?: string;
+  image_3?: string;
+  techstack?: string[];
+  techstack_description?: string[];
+  techstack_icons?: string[];
+  video?: string;
+  card_hover_styles?: string;
 };
 
 // Explicitly type the projects import
@@ -62,7 +71,7 @@ export default function Home() {
               id={project.id}
               title={project.title}
               description={project.description}
-              image={project.image}
+              card_hover_styles={project.card_hover_styles}
             />
           ))}
         </div>
