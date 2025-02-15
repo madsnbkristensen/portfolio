@@ -71,7 +71,7 @@ export default function Home() {
               id={project.id}
               title={project.title}
               description={project.description}
-              card_hover_styles={project.card_hover_styles}
+              card_image={project.card_image}
             />
           ))}
         </div>

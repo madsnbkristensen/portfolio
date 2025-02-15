@@ -16,8 +16,7 @@
         "WordPress is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database."
       ],
       "techstack_icons": ["php.png", "javascript.png", "wordpress.png"],
-      "video": "https://www.youtube.com/watch?v=J2X5mJ3HDYE",
-      "card_hover_styles": "{\"backgroundImage\": \"url(/images/adg-card-image.webp)\", \"backgroundSize\": \"200%\", \"backgroundPosition\": \"top\"}"
+      "video": "https://www.youtube.com/watch?v=J2X5mJ3HDYE"
     },
     {
       "id": 2,
@@ -35,8 +34,7 @@
         "WordPress is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database."
       ],
       "techstack_icons": ["php.png", "javascript.png", "wordpress.png"],
-      "video": "https://www.youtube.com/watch?v=J2X5mJ3HDYE",
-      "card_hover_styles": "{\"backgroundImage\": \"url(/images/resbook-card-image.webp)\", \"backgroundSize\": \"200%\", \"backgroundPosition\": \"top\"}"
+      "video": "https://www.youtube.com/watch?v=J2X5mJ3HDYE"
     },
     {
       "id": 3,
@@ -53,8 +51,7 @@
         "WordPress is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database."
       ],
       "techstack_icons": ["php.png", "javascript.png", "wordpress.png"],
-      "video": "https://www.youtube.com/watch?v=J2X5mJ3HDYE",
-      "card_hover_styles": "{\"backgroundImage\": \"url(/images/adg-card-image.webp)\", \"backgroundSize\": \"200%\", \"backgroundPosition\": \"top\"}"
+      "video": "https://www.youtube.com/watch?v=J2X5mJ3HDYE"
     }
   ]
 }
