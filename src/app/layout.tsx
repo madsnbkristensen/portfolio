@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Background from "../components/background";
-import Header from "../components/header";
+import Navbar from "../components/navbar";
 import { Urbanist } from "next/font/google";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css"; // Import the CSS
@@ -28,7 +28,7 @@ export default function RootLayout({
         <meta name="description" content={metadata.description} />
       </Head>
       <body className={urbanist.className}>
-        <Header />
+        <Navbar />
         <Background />
         {children}
       </body>

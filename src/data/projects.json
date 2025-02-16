@@ -4,6 +4,7 @@
       "id": 1,
       "title": "Design Draft Generator",
       "description": "Aveo AI Design Draft generator is a project created for Aveo.dk. Which create AI generated design drafts",
+      "long_description": " a project created for Aveo.dk. Which create AI generated design drafts. Aveo AI Design Draft generator is a project created for Aveo.dk. Which create AI generated design drafts. Aveo AI Design Draft generator is a project created for Aveo.dk. Which create AI generated design drafts. My role in this project was to create the backend and frontend of the project. I used PHP for the backend and JavaScript for the frontend. The project was built using WordPress.",
       "github": "https://github.com",
       "website": "https://aveo.dk",
       "card_image": "adg-card-image.webp",
@@ -15,13 +16,14 @@
         "JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification.",
         "WordPress is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database."
       ],
-      "techstack_icons": ["php.png", "javascript.png", "wordpress.png"],
+      "techstack_icons": ["php.svg", "js.svg", "wp.svg"],
       "video": "https://www.youtube.com/watch?v=J2X5mJ3HDYE"
     },
     {
       "id": 2,
       "title": "ResBook",
       "description": "ResBook is an online booking platform, spanning across hundreds of restaurants.",
+      "long_description": "Aveo AI Design Draft generator is a project created for Aveo.dk. Which create AI generated design drafts",
       "github": "https://github.com",
       "website": "https://aveo.dk",
       "card_image": "resbook-card-image.webp",
@@ -33,7 +35,7 @@
         "JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification.",
         "WordPress is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database."
       ],
-      "techstack_icons": ["php.png", "javascript.png", "wordpress.png"],
+      "techstack_icons": ["php.svg", "javascript.svg", "wordpress.svg"],
       "video": "https://www.youtube.com/watch?v=J2X5mJ3HDYE"
     },
     {

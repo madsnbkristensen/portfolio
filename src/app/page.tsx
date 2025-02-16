@@ -1,7 +1,11 @@
 import Title from "../components/title";
 import { Button } from "../components/ui/button";
 import Image from "next/image";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronDown,
+  faEnvelope,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Slider } from "@/components/slider";
 import projectsData from "@/data/projects.json";
@@ -34,7 +38,7 @@ export default function Home() {
         <div className="max-w-sm">
           <div>
             <Title text="Mads Kristensen" tag="h1" />
-            <p className="text-white text-xl mt-4">
+            <p className="text-white/80 text-xl mt-4">
               - Web developer with a passion for backend and system development
             </p>
           </div>
@@ -77,19 +81,32 @@ export default function Home() {
         </div>
       </section>
       <section className="w-full mt-20 flex flex-col items-center">
-        <Title text="About me" tag="h2" />
-        <p className="text-white text-md mt-4">
-          Hey there! I'm a 24-year-old web developer based in Aarhus, passionate
-          about building sleek, functional, and user-friendly digital
-          experiences. With a strong background in JavaScript, React, PHP, SQL,
-          and Next.js, I love turning ideas into reality through clean and
-          efficient code. When I'm not coding, you’ll probably find me exploring
-          new tech trends, enjoying a good coffee, or soaking in the creative
-          energy of the city. Always eager to learn, collaborate, and take on
-          new challenges—let’s build something great together!
-        </p>
+        <div>
+          <Title text="About me" tag="h2" />
+        </div>
+        <div className="grid grid-cols-[2fr_1fr] gap-4 mt-4">
+          <p className="text-white/80 text-sm">
+            Hey there! I'm a 24-year-old web developer based in Aarhus,
+            passionate about building sleek, functional, and user-friendly
+            digital experiences. With a strong background in JavaScript, React,
+            PHP, SQL, and Next.js, I love turning ideas into reality through
+            clean and efficient code. When I'm not coding, you’ll probably find
+            me exploring new tech trends, enjoying a good coffee, or soaking in
+            the creative energy of the city. Always eager to learn, collaborate,
+            and take on new challenges—let’s build something great together!
+          </p>
+          <div className="bg-slate-700 text-white p-4 rounded-md flex flex-col gap-4 justify-center h-fit">
+            <div className="flex items-center gap-2">
+              <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>41819450
+            </div>
+            <div className="flex items-center gap-2">
+              <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+              madskristensen@hotmail.dk
+            </div>
+          </div>
+        </div>
       </section>
-      <section className="w-full mt-20 flex flex-col items-center">
+      <section className="text-white w-full mt-20 flex flex-col items-center">
         REFERENCER
       </section>
     </main>
