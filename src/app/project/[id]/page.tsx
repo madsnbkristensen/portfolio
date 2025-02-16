@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import MediaGallery from "@/components/media-gallery";
 
 interface Params {
   params: {
@@ -75,8 +76,11 @@ export default function ProjectPage({ params }: Params) {
           </div>
         </div>
       </div>
-      <div>
-        <p className="text-white/80 mt-8">{project?.long_description}</p>
+      <div className="mt-8">
+        <p className="text-white/80">{project?.long_description}</p>
+      </div>
+      <div className="mt-8">
+        <MediaGallery />
       </div>
     </main>
   );
