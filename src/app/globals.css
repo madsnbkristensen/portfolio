@@ -70,3 +70,28 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.card-image {
+  background-size: 200%;
+  background-position: center;
+}
+
+.project-card:hover .card-image {
+  background-size: 100%;
+}
+
+.card-overlay {
+  background-color: black;
+  opacity: 0.75;
+}
+
+.project-card:hover .card-overlay {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3449754901960784) 12%,
+    rgba(0, 0, 0, 0.6587009803921569) 32%,
+    rgba(0, 0, 0, 0.7595413165266106) 50%
+  );
+}

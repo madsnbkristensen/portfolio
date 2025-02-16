@@ -78,6 +78,16 @@ export default function Home() {
       </section>
       <section className="w-full mt-20 flex flex-col items-center">
         <Title text="About me" tag="h2" />
+        <p className="text-white text-md mt-4">
+          Hey there! I'm a 24-year-old web developer based in Aarhus, passionate
+          about building sleek, functional, and user-friendly digital
+          experiences. With a strong background in JavaScript, React, PHP, SQL,
+          and Next.js, I love turning ideas into reality through clean and
+          efficient code. When I'm not coding, you’ll probably find me exploring
+          new tech trends, enjoying a good coffee, or soaking in the creative
+          energy of the city. Always eager to learn, collaborate, and take on
+          new challenges—let’s build something great together!
+        </p>
       </section>
       <section className="w-full mt-20 flex flex-col items-center">
         REFERENCER
