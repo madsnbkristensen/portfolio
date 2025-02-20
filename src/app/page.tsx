@@ -34,33 +34,31 @@ const projects: ProjectType[] = projectsData.projects;
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center max-w-3xl mx-auto mt-40">
-      <section className="grid grid-cols-[2fr_1fr] gap-4">
-        <div className="max-w-sm">
+      <section className="grid grid-cols-[2fr_1fr] gap-2">
+        <div>
           <div>
             <Title text="Mads Kristensen" tag="h1" />
-            <p className="text-white/80 text-xl mt-4">
+            <p className="text-white/80 text-2xl mt-4">
               - Web developer with a passion for backend and system development
             </p>
           </div>
           <div className="flex justify-start gap-12 mt-8">
             <Button className="bg-slate-800 w-28 hover:bg-slate-700">
-              My skills
-              <FontAwesomeIcon icon={faChevronDown} className="ml-2" />
+              Projects
+              <FontAwesomeIcon icon={faChevronDown} className="ml-1" />
             </Button>
             <Button className="bg-slate-800 w-28 hover:bg-slate-700">
-              Contact
+              About me
             </Button>
           </div>
         </div>
-        <div>
-          <Image
-            src="/images/mads-aveo-img.webp"
-            alt="Mads Kristensen"
-            width={200}
-            height={200}
-            className="rounded-xl"
-          />
-        </div>
+        <Image
+          src="/images/mads-aveo-img.webp"
+          alt="Mads Kristensen"
+          width={250}
+          height={250}
+          className="rounded-xl"
+        />
       </section>
       <section className="w-full mt-20 flex flex-col items-center">
         <Title text="TechStack" tag="h2" />
@@ -84,7 +82,14 @@ export default function Home() {
         <div>
           <Title text="About me" tag="h2" />
         </div>
-        <div className="grid grid-cols-[2fr_1fr] gap-4 mt-4">
+        <div className="flex gap-8 mt-4">
+          <Image
+            src="/images/mads-aveo-profil.webp"
+            alt="Mads Kristensen"
+            width={200}
+            height={200}
+            className="rounded-xl"
+          />
           <p className="text-white/80 text-sm">
             Hey there! I'm a 24-year-old web developer based in Aarhus,
             passionate about building sleek, functional, and user-friendly
@@ -95,19 +100,7 @@ export default function Home() {
             the creative energy of the city. Always eager to learn, collaborate,
             and take on new challenges—let’s build something great together!
           </p>
-          <div className="bg-slate-700 text-white p-4 rounded-md flex flex-col gap-4 justify-center h-fit">
-            <div className="flex items-center gap-2">
-              <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>41819450
-            </div>
-            <div className="flex items-center gap-2">
-              <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
-              madskristensen@hotmail.dk
-            </div>
-          </div>
         </div>
-      </section>
-      <section className="text-white w-full mt-20 flex flex-col items-center">
-        REFERENCER
       </section>
     </main>
   );

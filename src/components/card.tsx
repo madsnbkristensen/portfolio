@@ -14,7 +14,7 @@ export default function Card({
     <div className="project-card relative group overflow-hidden bg-slate-700 rounded-md">
       <div className="card-overlay absolute inset-x-0 bottom-0 z-20 h-full transition-all duration-300 group-hover:h-10"></div>
       <div
-        className="relative w-52 h-52 flex flex-col rounded-md p-4 gap-4 transition-all duration-300 card-image"
+        className="relative w-56 h-56 flex flex-col rounded-md p-4 gap-4 transition-all duration-300 card-image"
         style={{
           backgroundImage: `url(images/${card_image})`,
         }}

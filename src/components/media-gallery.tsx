@@ -36,7 +36,7 @@ export default function MediaGallery() {
   const [selectedItem, setSelectedItem] = useState<MediaItem>(mediaItems[0]);
 
   return (
-    <div className="flex gap-4 p-6 rounded-lg max-w-5xl mx-auto">
+    <div className="flex gap-4 py-6 rounded-lg max-w-5xl mx-auto">
       {/* Thumbnails */}
       <div className="flex flex-col gap-4 w-1/4">
         {mediaItems.map((item) => (
