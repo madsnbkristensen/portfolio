@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Slider } from "@/components/slider";
 import projectsData from "@/data/projects.json";
 import Card from "@/components/card";
+import Navbar from "@/components/navbar";
 
 // Define the type for a project
 export type ProjectType = {
@@ -34,6 +35,7 @@ const projects: ProjectType[] = projectsData.projects;
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center max-w-3xl mx-auto mt-40">
+      <Navbar />
       <section className="grid grid-cols-[2fr_1fr] gap-2">
         <div>
           <div>

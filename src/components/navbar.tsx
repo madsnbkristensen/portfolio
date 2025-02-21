@@ -19,58 +19,40 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`fixed left-0 right-0 flex justify-center z-50 max-w-3xl mx-auto w-full transition-all ${
-        isScrolled ? "top-2" : "top-10"
-      }`}
-    >
+    <div
+      className={`fixed left-0 right-0 flex justify-center z-50 max-w-3xl mx-auto w-full transition-all duration-300 ${
+        isScrolled ? "-top-10" : "top-10"
+      }`}>
       <div
-        className={`bg-slate-700 text-white flex items-center justify-between px-6 rounded-lg transition-all duration-300 ease-in-out ${
-          isScrolled ? "w-[50%] h-10 shadow-xl bg-slate-800" : "w-[100%] h-16"
-        }`}
-      >
+        className={`bg-slate-700 w-full text-white flex items-center justify-between px-6 rounded-lg transition-all duration-300 ease-in-out ${
+          isScrolled ? "h-10 shadow-xl bg-slate-800" : "h-16"
+        }`}>
         {/* Left section - Social icons */}
         <div className="flex items-center gap-2">
           <Link
             href="https://github.com"
-            className="hover:text-slate-300 transition-all"
-          >
-            <FontAwesomeIcon
-              icon={faGithub}
-              size={`${isScrolled ? "1x" : "lg"}`}
-            />
+            className="hover:text-slate-300 transition-all">
+            <FontAwesomeIcon icon={faGithub} size={"lg"} />
           </Link>
           <Link
             href="https://linkedin.com"
-            className="hover:text-slate-300 transition-all"
-          >
-            <FontAwesomeIcon
-              icon={faLinkedinIn}
-              size={`${isScrolled ? "1x" : "lg"}`}
-            />
+            className="hover:text-slate-300 transition-all">
+            <FontAwesomeIcon icon={faLinkedinIn} size={"lg"} />
           </Link>
         </div>
 
         {/* Center section - Navigation */}
         <div className="flex items-center gap-2">
-          {!isScrolled && <FontAwesomeIcon icon={faPhone} size="lg" />}
-          <span
-            className={`${
-              isScrolled ? "text-sm" : "text-md"
-            } overflow-hidden max-h-[24px]`}
-          >
-            +45 41 81 94 50
-          </span>
+          <FontAwesomeIcon icon={faPhone} size={"lg"} />
+          <span className="text-md">+45 41 81 94 50</span>
         </div>
 
         {/* Right section - Settings */}
         <div className="flex items-center gap-2">
-          {!isScrolled && <FontAwesomeIcon icon={faEnvelope} size="lg" />}
-          <span className={`${isScrolled ? "text-sm" : "text-md"}`}>
-            madskristensen@hotmail.dk
-          </span>
+          <FontAwesomeIcon icon={faEnvelope} size="lg" />
+          <span className="text-md">madskristensen@hotmail.dk</span>
         </div>
       </div>
-    </header>
+    </div>
   );
 }
