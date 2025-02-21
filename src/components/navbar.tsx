@@ -8,15 +8,23 @@ import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      if (window.scrollY > lastScrollY) {
+        // Scrolling down
+        setIsScrolled(true);
+      } else {
+        // Scrolling up
+        setIsScrolled(false);
+      }
+      setLastScrollY(window.scrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   return (
     <div
@@ -24,9 +32,9 @@ export default function Navbar() {
         isScrolled ? "-top-10" : "top-10"
       }`}>
       <div
-        className={`bg-slate-700 w-full text-white flex items-center justify-between px-6 rounded-lg transition-all duration-300 ease-in-out ${
-          isScrolled ? "h-10 shadow-xl bg-slate-800" : "h-16"
-        }`}>
+        className={`bg-slate-700 w-full text-white flex items-center justify-between px-6 rounded-lg transition-all duration-300 ease-in-out shadow-xl ${
+          isScrolled ? "h-10 bg-slate-800" : "h-16"
+        } ${lastScrollY ? "bg-slate-800" : ""}`}>
         {/* Left section - Social icons */}
         <div className="flex items-center gap-2">
           <Link
