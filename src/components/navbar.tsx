@@ -28,23 +28,27 @@ export default function Navbar() {
 
   return (
     <div
-      className={`fixed left-0 right-0 flex justify-center z-50 max-w-3xl mx-auto w-full transition-all duration-300 ${
+      className={`fixed left-0 right-0 z-50 mx-auto flex w-full max-w-3xl justify-center transition-all duration-300 ${
         isScrolled ? "-top-10" : "top-10"
-      }`}>
+      }`}
+    >
       <div
-        className={`bg-slate-700 w-full text-white flex items-center justify-between px-6 rounded-lg transition-all duration-300 ease-in-out shadow-xl ${
+        className={`flex w-full items-center justify-between rounded-lg bg-slate-700 px-6 text-white shadow-xl transition-all duration-300 ease-in-out ${
           isScrolled ? "h-10 bg-slate-800" : "h-16"
-        } ${lastScrollY ? "bg-slate-800" : ""}`}>
+        } ${lastScrollY ? "bg-slate-800" : ""}`}
+      >
         {/* Left section - Social icons */}
         <div className="flex items-center gap-2">
           <Link
             href="https://github.com"
-            className="hover:text-slate-300 transition-all">
+            className="transition-all hover:text-slate-300"
+          >
             <FontAwesomeIcon icon={faGithub} size={"lg"} />
           </Link>
           <Link
             href="https://linkedin.com"
-            className="hover:text-slate-300 transition-all">
+            className="transition-all hover:text-slate-300"
+          >
             <FontAwesomeIcon icon={faLinkedinIn} size={"lg"} />
           </Link>
         </div>

@@ -42,24 +42,27 @@ export const Slider = () => {
   ];
 
   return (
-    <div className="w-[100%] py-8 mx-auto max-w-3xl">
-      <div className="container mx-auto rounded-md overflow-hidden">
+    <div className="mx-auto w-full max-w-3xl py-8">
+      <div className="container mx-auto overflow-hidden rounded-md">
         <div className="flex flex-col">
-          <Carousel setApi={setApi} className="w-full">
+          <Carousel setApi={setApi} className="m-auto w-10/12 md:w-full">
             <CarouselContent>
               {logos.map((logo, index) => (
-                <CarouselItem className="basis-1/4 lg:basis-1/6" key={index}>
-                  <div className="relative flex h-24 w-24 rounded-md bg-slate-700 aspect-square bg-muted items-center justify-center p-6">
+                <CarouselItem
+                  className="basis-1/3 sm:basis-1/4 md:basis-1/6"
+                  key={index}
+                >
+                  <div className="relative flex aspect-square h-20 w-20 items-center justify-center rounded-md bg-muted bg-slate-700 p-6 sm:h-28 sm:w-28 md:h-24 md:w-24">
                     <Image
                       src={logo.src}
                       alt={logo.title}
                       width={100}
                       height={100}
-                      className="object-contain h-full w-full"
+                      className="h-full w-full object-contain"
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-70 rounded-md flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-white px-2 py-1 rounded-lg">
-                        <h3 className="text-black text-center font-bold">
+                    <div className="absolute inset-0 flex items-center justify-center rounded-md bg-black bg-opacity-70 opacity-0 transition-opacity duration-300 hover:opacity-100">
+                      <div className="rounded-lg bg-white px-2 py-1">
+                        <h3 className="md:text-md text-center text-xs font-bold text-black">
                           {logo.title}
                         </h3>
                       </div>

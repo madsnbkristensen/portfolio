@@ -15,5 +15,5 @@ library.add(
   faChevronDown,
   faSun,
   faArrowRight,
-  faPhone
+  faPhone,
 );

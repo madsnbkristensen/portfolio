@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { cn } from "@/lib/utils"
+import { useState } from "react";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 interface MediaItem {
-  id: number
-  type: "image" | "video"
-  src: string
-  alt?: string
+  id: number;
+  type: "image" | "video";
+  src: string;
+  alt?: string;
 }
 
 export default function MediaGallery() {
@@ -31,34 +31,46 @@ export default function MediaGallery() {
       src: "/placeholder.svg?height=400&width=600",
       alt: "Sample image 2",
     },
-  ]
+  ];
 
-  const [selectedItem, setSelectedItem] = useState<MediaItem>(mediaItems[0])
+  const [selectedItem, setSelectedItem] = useState<MediaItem>(mediaItems[0]);
 
   return (
-    <div className="flex gap-4 bg-black p-6 rounded-lg max-w-5xl mx-auto">
+    <div className="mx-auto flex max-w-5xl gap-4 rounded-lg bg-black p-6">
       {/* Thumbnails */}
-      <div className="flex flex-col gap-4 w-1/4">
+      <div className="flex w-1/4 flex-col gap-4">
         {mediaItems.map((item) => (
           <div
             key={item.id}
             onClick={() => setSelectedItem(item)}
             className={cn(
               "relative aspect-video cursor-pointer transition-opacity hover:opacity-80",
-              selectedItem.id === item.id ? "ring-2 ring-primary" : "opacity-70",
+              selectedItem.id === item.id
+                ? "ring-2 ring-primary"
+                : "opacity-70",
             )}
           >
             {item.type === "image" ? (
-              <Image src={item.src || "/placeholder.svg"} alt={item.alt || ""} fill className="object-cover" />
+              <Image
+                src={item.src || "/placeholder.svg"}
+                alt={item.alt || ""}
+                fill
+                className="object-cover"
+              />
             ) : (
-              <video src={item.src} className="w-full h-full object-cover" muted playsInline />
+              <video
+                src={item.src}
+                className="h-full w-full object-cover"
+                muted
+                playsInline
+              />
             )}
           </div>
         ))}
       </div>
 
       {/* Main Display */}
-      <div className="relative flex-1 aspect-[16/9]">
+      <div className="relative aspect-[16/9] flex-1">
         {selectedItem.type === "image" ? (
           <Image
             src={selectedItem.src || "/placeholder.svg"}
@@ -68,10 +80,15 @@ export default function MediaGallery() {
             priority
           />
         ) : (
-          <video src={selectedItem.src} className="w-full h-full object-cover" controls autoPlay playsInline />
+          <video
+            src={selectedItem.src}
+            className="h-full w-full object-cover"
+            controls
+            autoPlay
+            playsInline
+          />
         )}
       </div>
     </div>
-  )
+  );
 }
-

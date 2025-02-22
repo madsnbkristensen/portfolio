@@ -12,7 +12,7 @@ export default function Title({ text, tag }: TitleProps) {
     return <h3 className="text-2xl font-bold text-white">{text}</h3>;
   } else {
     return (
-      <h4 className="text-xl group-hover:opacity-0 font-bold text-white transition-all duration-200">
+      <h4 className="text-xl font-bold text-white transition-all duration-200 group-hover:opacity-0">
         {text}
       </h4>
     );

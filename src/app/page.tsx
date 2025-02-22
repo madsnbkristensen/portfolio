@@ -7,7 +7,8 @@ import { Slider } from "@/components/slider";
 import projectsData from "@/data/projects.json";
 import Card from "@/components/card";
 import Navbar from "@/components/navbar";
-
+import ArrowButton from "@/components/ui/arrowButton";
+import Link from "next/link";
 // Define the type for a project
 export type ProjectType = {
   id: number;
@@ -30,24 +31,28 @@ const projects: ProjectType[] = projectsData.projects;
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center max-w-3xl mx-auto mt-40">
+    <main className="mx-auto mt-40 flex max-w-3xl flex-col items-center justify-center">
       <Navbar />
       <section className="grid grid-cols-[2fr_1fr] gap-2">
         <div>
           <div>
             <Title text="Mads Kristensen" tag="h1" />
-            <p className="text-white/80 text-2xl mt-4">
+            <p className="mt-4 text-2xl text-white/80">
               - Web developer with a passion for backend and system development
             </p>
           </div>
-          <div className="flex justify-start gap-12 mt-8">
-            <Button className="bg-slate-800 w-28 hover:bg-slate-700">
-              Projects
-              <FontAwesomeIcon icon={faChevronDown} className="ml-1" />
-            </Button>
-            <Button className="bg-slate-800 w-28 hover:bg-slate-700">
-              About me
-            </Button>
+          <div className="mt-8 flex justify-start gap-12">
+            <Link href="#projects">
+              <Button className="w-28 bg-slate-800 hover:bg-slate-700">
+                Projects
+                <FontAwesomeIcon icon={faChevronDown} className="ml-1" />
+              </Button>
+            </Link>
+            <Link href="#about">
+              <Button className="w-28 bg-slate-800 hover:bg-slate-700">
+                About me
+              </Button>
+            </Link>
           </div>
         </div>
         <Image
@@ -58,13 +63,16 @@ export default function Home() {
           className="rounded-xl"
         />
       </section>
-      <section className="w-full mt-20 flex flex-col items-center">
+      <section className="mt-20 flex w-full flex-col items-center">
         <Title text="TechStack" tag="h2" />
         <Slider />
       </section>
-      <section className="w-full mt-20 flex flex-col items-center">
+      <section
+        id="projects"
+        className="mt-20 flex w-full flex-col items-center"
+      >
         <Title text="Projects" tag="h2" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project: ProjectType) => (
             <Card
               key={project.id}
@@ -76,11 +84,11 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="w-full mt-20 flex flex-col items-center">
+      <section id="about" className="mt-20 flex w-full flex-col items-center">
         <div>
           <Title text="About me" tag="h2" />
         </div>
-        <div className="flex gap-8 mt-4">
+        <div className="mt-4 flex gap-8">
           <Image
             src="/images/mads-aveo-profil.webp"
             alt="Mads Kristensen"
@@ -88,7 +96,7 @@ export default function Home() {
             height={200}
             className="rounded-xl"
           />
-          <p className="text-white/80 text-sm">
+          <p className="text-sm leading-relaxed text-white/80">
             Hey there! I'm a 24-year-old web developer based in Aarhus,
             passionate about building sleek, functional, and user-friendly
             digital experiences. With a strong background in JavaScript, React,
@@ -100,6 +108,12 @@ export default function Home() {
           </p>
         </div>
       </section>
+      <ArrowButton
+        orientation="up"
+        url="#top"
+        className="fixed bottom-10 right-10 z-50"
+        showOnScroll={true}
+      ></ArrowButton>
     </main>
   );
 }

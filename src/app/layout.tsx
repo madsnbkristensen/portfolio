@@ -26,6 +26,7 @@ export default function RootLayout({
       <head>
         <title>{String(metadata.title) ?? ""}</title>
         <meta name="description" content={metadata.description ?? ""} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.svg" />
       </head>
       <body className={urbanist.className}>
