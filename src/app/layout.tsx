@@ -29,7 +29,6 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.svg" />
       </head>
       <body className={urbanist.className}>
-        <Navbar />
         <Background />
         {children}
         <Footer />

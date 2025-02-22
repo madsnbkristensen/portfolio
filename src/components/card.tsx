@@ -17,8 +17,7 @@ export default function Card({
         className="relative w-56 h-56 flex flex-col rounded-md p-4 gap-4 transition-all duration-300 card-image"
         style={{
           backgroundImage: `url(images/${card_image})`,
-        }}
-      >
+        }}>
         <div className="z-20">
           <Title text={title} tag="h4" />
           <p className="text-sm mt-2 text-white group-hover:opacity-0 transition-all duration-200">
@@ -28,8 +27,7 @@ export default function Card({
       </div>
       <Link
         className="card-link absolute text-white flex items-center bottom-2 right-4 z-20 transition-all duration-200"
-        href={`/project/${id}`}
-      >
+        href={`/project/${id}`}>
         <span className="opacity-0 transition-all duration-200 group-hover:opacity-100">
           Read more
         </span>
