@@ -1,11 +1,7 @@
 import Title from "../components/title";
 import { Button } from "../components/ui/button";
 import Image from "next/image";
-import {
-  faChevronDown,
-  faEnvelope,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Slider } from "@/components/slider";
 import projectsData from "@/data/projects.json";

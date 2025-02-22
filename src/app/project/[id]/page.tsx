@@ -7,6 +7,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import MediaGallery from "@/components/media-gallery";
+import ArrowButton from "@/components/ui/arrowButton";
 
 interface Params {
   params: {
@@ -31,6 +32,7 @@ export default function ProjectPage({ params }: Params) {
 
   return (
     <main className="flex flex-col justify-center max-w-3xl mx-auto mt-40">
+      <ArrowButton orientation="left" />
       <Title text={project?.title} tag="h2" />
       <div className="flex justify-between mt-6">
         <div className="flex flex-col">
