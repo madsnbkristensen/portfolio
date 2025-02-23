@@ -36,15 +36,15 @@ export default function MediaGallery() {
   const [selectedItem, setSelectedItem] = useState<MediaItem>(mediaItems[0]);
 
   return (
-    <div className="mx-auto flex max-w-5xl gap-4 rounded-lg py-6">
+    <div className="mx-auto flex h-full w-full max-w-5xl flex-col-reverse gap-4 rounded-lg py-6 sm:flex-row">
       {/* Thumbnails */}
-      <div className="flex w-1/4 flex-col gap-4">
+      <div className="flex h-12 w-1/3 flex-row gap-4 sm:h-full sm:w-1/4 sm:flex-col">
         {mediaItems.map((item) => (
           <div
             key={item.id}
             onClick={() => setSelectedItem(item)}
             className={cn(
-              "relative aspect-video cursor-pointer transition-opacity hover:opacity-80",
+              "relative aspect-video h-full w-full cursor-pointer transition-opacity hover:opacity-80",
               selectedItem.id === item.id
                 ? "ring-2 ring-primary"
                 : "opacity-70",

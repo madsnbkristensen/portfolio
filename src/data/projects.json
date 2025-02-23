@@ -3,18 +3,18 @@
     {
       "id": 1,
       "title": "Design Draft Generator",
-      "description": "Aveo AI Design Draft generator is a project created for Aveo.dk. Which create AI generated design drafts",
-      "long_description": " a project created for Aveo.dk. Which create AI generated design drafts. Aveo AI Design Draft generator is a project created for Aveo.dk. Which create AI generated design drafts. Aveo AI Design Draft generator is a project created for Aveo.dk. Which create AI generated design drafts. My role in this project was to create the backend and frontend of the project. I used PHP for the backend and JavaScript for the frontend. The project was built using WordPress.",
-      "github": "https://github.com",
-      "website": "https://aveo.dk",
-      "card_image": "adg-card-image.webp",
-      "image_2": "adg-2.webp",
+      "description": "Aveo AI Design Draft generator is a project created for Aveo Web & Marketing. Which create AI generated design drafts.",
+      "long_description": "Aveo AI Design Draft generator is a project that I launched for Aveo.dk, which is a subbrand of Auxo, where I currently work.\nThe project is a tool that generates design drafts for websites, based on the users input. The main purpose of the generator is to give the user a visual representation of how their website could look, but also collect leads for the sales team to follow up on.\n\nThe generator uses the OpenAI API to utilize their LLM model, which is prompted with the users input and some design theory. Then the generator creates a response which includes design decisions, which then is handled by the plugin and used to generate the design draft, based on a lot of different design models and templates, created by me. The design draft is generated in plain HTML, which allows for the creation of interactive elements, using JavaScript.\n\nThe generator is also utilizing a CVR API, to collect data about the users company, which is then used to create a more personalized design draft. And gives the sales team a better understanding of the users needs.\n\nUnfortunately the project is not open source, but you can see a demo of the generator in action, in the video below.",
+      "github": "",
+      "website": "https://aveo.dk/gratis-hjemmeside-udkast/",
+      "card_image": "aveo-adg-form.webp",
+      "image_2": "aveo-adg-draft.webp",
       "image_3": "project1.jpg",
       "techstack": ["PHP", "JavaScript", "Wordpress"],
       "techstack_description": [
-        "PHP is a server-side scripting language designed for web development but also used as a general-purpose programming language.",
-        "JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification.",
-        "WordPress is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database."
+        "PHP is the main language used for the backend of the project, where it handles the API requests and the data handling, aswell as the dynamic content on the design draft, based on the response from the OpenAI API.",
+        "JavaScript powers the project's frontend, handling user input, form validation, and enhancing interactivity. It brings the design draft to life, allowing users to engage dynamically and gain a more immersive preview of how the final website could look and function in real time.",
+        "WordPress powers the Design Draft Generator, ensuring seamless integration with the Aveo.dk website. Developed as a dedicated plugin, it simplifies version management, deployment, and maintenance, allowing me and the development team to ensure continuous improvements and optimal performance."
       ],
       "techstack_icons": ["php.svg", "js.svg", "wp.svg"],
       "video": "https://www.youtube.com/watch?v=J2X5mJ3HDYE"
@@ -22,20 +22,24 @@
     {
       "id": 2,
       "title": "ResBook",
-      "description": "ResBook is an online booking platform, spanning across hundreds of restaurants.",
-      "long_description": "Aveo AI Design Draft generator is a project created for Aveo.dk. Which create AI generated design drafts",
+      "description": "ResBook is an online booking platform, created as a final project during the 5th semester at Business Academy Aarhus.",
+      "long_description": "ResBook is a restaurant booking system developed by my team and me as our final project during the 5th semester at Business Academy Aarhus. It enables users to easily book tables at restaurants while providing restaurant owners with an efficient booking management system.\n\nKey Features & Technologies:\n\nAdvanced Authentication: A key feature of ResBook is its custom-built authentication system, leveraging session tokens and Next.js middleware to ensure a secure and scalable authentication flow. Watch the video below to learn more about our implementation.\n\nDual Frontends for Seamless Experience: The system includes two dedicated frontends—one for users, built with Next.js for a smooth booking experience, and one for restaurants, developed in Remix to provide an intuitive booking management interface.\n\nRobust Backend & Deployment: The dedicated backend is developed using PHP and powered by a MySQL database for efficient data handling. The frontends are deployed on Vercel, while the backend runs on a PHP server provided by Simply, to ensure reliability and performance.",
       "github": "https://github.com",
-      "website": "https://aveo.dk",
-      "card_image": "resbook-card-image.webp",
-      "image_2": "project1.jpg",
+      "website": "https://resbook.vercel.app/",
+      "card_image": "resbook-iphone.webp",
+      "image_2": "resbook-booking.webp",
       "image_3": "project1.jpg",
-      "techstack": ["PHP", "JavaScript", "Wordpress"],
+      "techstack": ["Next.js", "PHP", "Remix", "GitHub Projects / Git"],
       "techstack_description": [
-        "PHP is a server-side scripting language designed for web development but also used as a general-purpose programming language.",
-        "JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification.",
-        "WordPress is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database."
+        "Used to build the user-facing frontend of ResBook, ensuring a fast and smooth booking experience. It was chosen for its server-side rendering (SSR) capabilities, API routes, and middleware, which played a key role in implementing a secure authentication system.",
+
+        "Used for the dedicated backend, handling API requests and database interactions. It provides a stable and efficient environment for managing restaurant bookings and user data while integrating seamlessly with the MySQL database. The dedicated backend was build so it could be easily scaled and used by multiple frontends.",
+
+        "Used to build the restaurant-facing frontend, offering an optimized and interactive dashboard for managing bookings efficiently. The project requirements specified two separate frontends using different frameworks, leading us to choose Remix for the second frontend.",
+
+        "Used to organize and manage the development process, ensuring smooth collaboration within the team. Feature branches and pull requests were utilized to maintain code quality and streamline the workflow. Alongside GitHub Projects, we used Git for version control."
       ],
-      "techstack_icons": ["php.svg", "javascript.svg", "wordpress.svg"],
+      "techstack_icons": ["php.svg", "next.svg", "remix.svg", "git.svg"],
       "video": "https://www.youtube.com/watch?v=J2X5mJ3HDYE"
     },
     {

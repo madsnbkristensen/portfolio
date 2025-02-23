@@ -29,40 +29,49 @@ export default function Navbar() {
   return (
     <div
       className={`fixed left-0 right-0 z-50 mx-auto flex w-full max-w-3xl justify-center transition-all duration-300 ${
-        isScrolled ? "-top-10" : "top-10"
+        isScrolled ? "-top-10" : "xs:top-10 top-0"
       }`}
     >
       <div
-        className={`flex w-full items-center justify-between rounded-lg bg-slate-700 px-6 text-white shadow-xl transition-all duration-300 ease-in-out ${
-          isScrolled ? "h-10 bg-slate-800" : "h-16"
+        className={`xs:mx-5 xs:px-6 flex w-full items-center justify-between xs:rounded-lg bg-slate-700 px-2 text-white shadow-xl transition-all duration-300 ease-in-out md:mx-0 ${
+          isScrolled ? "h-10 bg-slate-800" : "h-12 sm:h-16"
         } ${lastScrollY ? "bg-slate-800" : ""}`}
       >
         {/* Left section - Social icons */}
-        <div className="flex items-center gap-2">
+        <div className=" xs:gap-2 gap-1 flex items-center">
           <Link
             href="https://github.com"
             className="transition-all hover:text-slate-300"
           >
-            <FontAwesomeIcon icon={faGithub} size={"lg"} />
+            <FontAwesomeIcon icon={faGithub} className="text-sm sm:text-lg" />
           </Link>
           <Link
             href="https://linkedin.com"
             className="transition-all hover:text-slate-300"
           >
-            <FontAwesomeIcon icon={faLinkedinIn} size={"lg"} />
+            <FontAwesomeIcon
+              icon={faLinkedinIn}
+              className="text-sm sm:text-lg"
+            />
           </Link>
         </div>
 
         {/* Center section - Navigation */}
         <div className="flex items-center gap-2">
-          <FontAwesomeIcon icon={faPhone} size={"lg"} />
-          <span className="text-md">+45 41 81 94 50</span>
+          <div className="hidden sm:block">
+            <FontAwesomeIcon icon={faPhone} size="lg" />
+          </div>
+          <span className="text-sm sm:text-base">+45 41 81 94 50</span>
         </div>
 
         {/* Right section - Settings */}
         <div className="flex items-center gap-2">
-          <FontAwesomeIcon icon={faEnvelope} size="lg" />
-          <span className="text-md">madskristensen@hotmail.dk</span>
+          <div className="hidden sm:block">
+            <FontAwesomeIcon icon={faEnvelope} size="lg" />
+          </div>
+          <span className="text-sm md:text-base">
+            madskristensen@hotmail.dk
+          </span>
         </div>
       </div>
     </div>

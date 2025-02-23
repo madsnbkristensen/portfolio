@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer() {
   return (
-    <footer className="mx-auto my-28 w-full max-w-3xl">
+    <footer className="mx-auto my-28 w-[90%] max-w-3xl md:w-full">
       <div className="flex justify-between text-lg text-white">
         <div className="flex gap-2">
           <FontAwesomeIcon size="lg" icon={faGithub} />

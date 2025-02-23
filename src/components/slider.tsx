@@ -52,7 +52,7 @@ export const Slider = () => {
                   className="basis-1/3 sm:basis-1/4 md:basis-1/6"
                   key={index}
                 >
-                  <div className="relative flex aspect-square h-20 w-20 items-center justify-center rounded-md bg-muted bg-slate-700 p-6 sm:h-28 sm:w-28 md:h-24 md:w-24">
+                  <div className="relative flex aspect-square h-20 w-20 items-center justify-center rounded-md bg-muted bg-slate-700 p-6 xs:h-28 xs:w-28 md:h-24 md:w-24">
                     <Image
                       src={logo.src}
                       alt={logo.title}

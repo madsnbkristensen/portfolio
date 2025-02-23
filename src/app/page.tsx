@@ -31,17 +31,17 @@ const projects: ProjectType[] = projectsData.projects;
 
 export default function Home() {
   return (
-    <main className="mx-auto mt-40 flex max-w-3xl flex-col items-center justify-center">
+    <main className="xs:mt-40 xs:px-0 mx-auto mt-20 flex max-w-3xl flex-col items-center justify-center px-4">
       <Navbar />
-      <section className="grid grid-cols-[2fr_1fr] gap-2">
+      <section className="xs:grid xs:grid-cols-[2fr_1fr] xs:gap-2 flex flex-col items-center gap-7 sm:items-start">
         <div>
           <div>
             <Title text="Mads Kristensen" tag="h1" />
-            <p className="mt-4 text-2xl text-white/80">
+            <p className="xs:text-2xl xs:mt-4 xs:px-0 xs:text-start mt-1 px-10 text-center text-lg text-white/80">
               - Web developer with a passion for backend and system development
             </p>
           </div>
-          <div className="mt-8 flex justify-start gap-12">
+          <div className="xs:justify-start xs:mt-8 xs:gap-12 mt-4 flex justify-center gap-6">
             <Link href="#projects">
               <Button className="w-28 bg-slate-800 hover:bg-slate-700">
                 Projects
@@ -63,13 +63,13 @@ export default function Home() {
           className="rounded-xl"
         />
       </section>
-      <section className="mt-20 flex w-full flex-col items-center">
+      <section className="xs:mt-20 mt-14 flex w-full flex-col items-center">
         <Title text="TechStack" tag="h2" />
         <Slider />
       </section>
       <section
         id="projects"
-        className="mt-20 flex w-full flex-col items-center"
+        className="xs:mt-20 mt-10 flex w-full flex-col items-center"
       >
         <Title text="Projects" tag="h2" />
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -84,11 +84,14 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section id="about" className="mt-20 flex w-full flex-col items-center">
+      <section
+        id="about"
+        className="xs:mt-20 mt-10 flex w-full flex-col items-center"
+      >
         <div>
           <Title text="About me" tag="h2" />
         </div>
-        <div className="mt-4 flex gap-8">
+        <div className="mt-4 flex flex-col-reverse items-center gap-8 sm:flex-row">
           <Image
             src="/images/mads-aveo-profil.webp"
             alt="Mads Kristensen"
@@ -96,7 +99,7 @@ export default function Home() {
             height={200}
             className="rounded-xl"
           />
-          <p className="text-sm leading-relaxed text-white/80">
+          <p className="text-center text-sm leading-relaxed text-white/80 sm:text-start">
             Hey there! I'm a 24-year-old web developer based in Aarhus,
             passionate about building sleek, functional, and user-friendly
             digital experiences. With a strong background in JavaScript, React,
@@ -111,7 +114,7 @@ export default function Home() {
       <ArrowButton
         orientation="up"
         url="#top"
-        className="fixed bottom-10 right-10 z-50"
+        className="xs:bottom-10 xs:right-10 fixed bottom-5 right-5 z-50"
         showOnScroll={true}
       ></ArrowButton>
     </main>
