@@ -11,28 +11,11 @@ interface MediaItem {
   alt?: string;
 }
 
-export default function MediaGallery() {
-  // Sample media items - replace with your actual media sources
-  const mediaItems: MediaItem[] = [
-    {
-      id: 1,
-      type: "image",
-      src: "/images/adg-2.webp",
-      alt: "Sample image 1",
-    },
-    {
-      id: 2,
-      type: "image",
-      src: "/images/mads-aveo-img.webp",
-    },
-    {
-      id: 3,
-      type: "image",
-      src: "/images/adg-card-image.webp",
-      alt: "Sample image 2",
-    },
-  ];
+interface MediaGalleryProps {
+  mediaItems: MediaItem[];
+}
 
+export default function MediaGallery({ mediaItems }: MediaGalleryProps) {
   const [selectedItem, setSelectedItem] = useState<MediaItem>(mediaItems[0]);
 
   return (

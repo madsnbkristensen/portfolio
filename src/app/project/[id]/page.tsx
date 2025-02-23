@@ -30,6 +30,36 @@ export default function ProjectPage({ params }: Params) {
     }),
   );
 
+  const mediaItems = [];
+  if (project?.video) {
+    mediaItems.push({
+      id: 0,
+      type: "video",
+      src: project.video,
+    });
+  }
+  if (project?.image_2 && mediaItems.length < 3) {
+    mediaItems.push({
+      id: mediaItems.length,
+      type: "image",
+      src: `/images/${project.image_2}`,
+    });
+  }
+  if (project?.image_3 && mediaItems.length < 3) {
+    mediaItems.push({
+      id: mediaItems.length,
+      type: "image",
+      src: `/images/${project.image_3}`,
+    });
+  }
+  if (project?.card_image && mediaItems.length < 3) {
+    mediaItems.push({
+      id: mediaItems.length,
+      type: "image",
+      src: `/images/${project.card_image}`,
+    });
+  }
+
   return (
     <main className="mx-auto mt-14 flex w-full max-w-3xl flex-col items-center px-4 sm:items-start sm:px-0">
       <div className="flex w-full justify-start">
@@ -90,7 +120,7 @@ export default function ProjectPage({ params }: Params) {
         </p>
       </div>
       <div className="mt-8 w-full">
-        <MediaGallery />
+        <MediaGallery mediaItems={mediaItems} />
       </div>
     </main>
   );
