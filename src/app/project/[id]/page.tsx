@@ -85,8 +85,8 @@ export default function ProjectPage({ params }: Params) {
                   key={index}
                   src={"/logos/" + icon}
                   alt={`Icon ${index}`}
-                  width={30}
-                  height={30}
+                  width={40}
+                  height={40}
                 />
               ))}
             </div>

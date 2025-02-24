@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ProjectType } from "../app/page";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 
 export default function Card({
   id,
@@ -11,14 +12,19 @@ export default function Card({
   card_image,
 }: ProjectType) {
   return (
-    <div className="project-card group relative overflow-hidden rounded-md bg-slate-700">
+    <div
+      key={id}
+      className="project-card group relative overflow-hidden rounded-md bg-slate-700"
+    >
       <div className="card-overlay absolute inset-x-0 bottom-0 z-20 h-full transition-all duration-300 group-hover:h-10"></div>
-      <div
-        className="card-image relative flex h-56 w-56 flex-col gap-4 rounded-md p-4 transition-all duration-300"
-        style={{
-          backgroundImage: `url(images/${card_image})`,
-        }}
-      >
+      <div className="card-image relative flex h-64 w-64 flex-col gap-4 rounded-md p-4 transition-all duration-300">
+        <Image
+          src={`/images/${card_image}`}
+          alt={title}
+          layout="fill"
+          objectFit="cover"
+          className="scale-[120%] rounded-md transition-all duration-300 group-hover:scale-[140%]"
+        />
         <div className="z-20">
           <Title text={title} tag="h4" />
           <p className="mt-2 text-sm text-white transition-all duration-200 group-hover:opacity-0">

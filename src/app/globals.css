@@ -72,15 +72,6 @@ body {
   }
 }
 
-.card-image {
-  background-size: 160%;
-  background-position: center;
-}
-
-.project-card:hover .card-image {
-  background-size: 180%;
-}
-
 .card-overlay {
   background-color: black;
   opacity: 0.75;

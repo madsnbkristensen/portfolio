@@ -128,7 +128,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        {/* <div className="mt-4 flex w-full justify-center sm:justify-end">
+        <div className="mt-4 flex w-full justify-center sm:justify-end">
           <Image
             src="/images/mads-aveo-profil.webp"
             alt="Mads Kristensen"
@@ -136,7 +136,7 @@ export default function Home() {
             height={200}
             className="rounded-xl"
           />
-        </div> */}
+        </div>
       </section>
       <ArrowButton
         orientation="up"
