@@ -12,7 +12,7 @@ import Link from "next/link";
 // Define the type for a project
 export type ProjectType = {
   id: number;
-  title?: string;
+  title: string;
   description?: string;
   github?: string;
   website?: string;
