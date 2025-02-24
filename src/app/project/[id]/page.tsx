@@ -10,13 +10,13 @@ import MediaGallery from "@/components/media-gallery";
 import ArrowButton from "@/components/ui/arrowButton";
 
 interface Params {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function ProjectPage({ params }: Params) {
-  const { id } = params;
+export default async function ProjectPage({ params }: Params) {
+  const { id } = await params;
 
   const project = projectsData.projects.find(
     (project) => project.id === parseInt(id),
