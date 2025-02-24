@@ -5,7 +5,9 @@ import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-
+import AutoScroll, {
+  type AutoScrollOptionsType,
+} from "embla-carousel-auto-scroll";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -19,6 +21,7 @@ type CarouselProps = {
   plugins?: CarouselPlugin;
   orientation?: "horizontal" | "vertical";
   setApi?: (api: CarouselApi) => void;
+  autoScrollOptions?: AutoScrollOptionsType; // Add this line
 };
 
 type CarouselContextProps = {
@@ -51,20 +54,22 @@ const Carousel = React.forwardRef<
       orientation = "horizontal",
       opts,
       setApi,
-      plugins,
+      plugins = [], // Default to an empty array
       className,
       children,
+      autoScrollOptions, // Add this line
       ...props
     },
     ref,
   ) => {
+    // Add the AutoScroll plugin to the plugins array
     const [carouselRef, api] = useEmblaCarousel(
       {
         ...opts,
         axis: orientation === "horizontal" ? "x" : "y",
         loop: true,
       },
-      plugins,
+      [...plugins, AutoScroll(autoScrollOptions)], // Add AutoScroll plugin here
     );
     const [canScrollPrev, setCanScrollPrev] = React.useState(false);
     const [canScrollNext, setCanScrollNext] = React.useState(false);

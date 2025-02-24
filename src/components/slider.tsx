@@ -45,7 +45,11 @@ export const Slider = () => {
     <div className="mx-auto w-full max-w-3xl py-8">
       <div className="container mx-auto overflow-hidden rounded-md">
         <div className="flex flex-col">
-          <Carousel setApi={setApi} className="m-auto w-10/12 md:w-full">
+          <Carousel
+            setApi={setApi}
+            autoScrollOptions={{ speed: 1 }}
+            className="m-auto w-10/12 md:w-full"
+          >
             <CarouselContent>
               {logos.map((logo, index) => (
                 <CarouselItem
