@@ -107,7 +107,7 @@ export default async function ProjectPage({ params }: Params) {
               </Link>
             )}
             <Link
-              href="https://github.com"
+              href={project.website || "#"}
               className="text-white transition-all hover:text-slate-300"
             >
               Visit website{" "}
