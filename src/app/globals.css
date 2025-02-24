@@ -73,12 +73,12 @@ body {
 }
 
 .card-image {
-  background-size: 120%;
+  background-size: 160%;
   background-position: center;
 }
 
 .project-card:hover .card-image {
-  background-size: 100%;
+  background-size: 180%;
 }
 
 .card-overlay {

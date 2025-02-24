@@ -35,7 +35,8 @@ export default function ProjectPage({ params }: Params) {
     mediaItems.push({
       id: 0,
       type: "video",
-      src: project.video,
+      src: project.video.replace("watch?v=", "embed/"),
+      thumbnail: `/images/${project.thumbnail}`, // Set the thumbnail for the video
     });
   }
   if (project?.image_2 && mediaItems.length < 3) {
@@ -68,13 +69,15 @@ export default function ProjectPage({ params }: Params) {
       <Title text={project?.title} tag="h2" />
       <div className="mt-6 flex w-full flex-col items-center justify-between gap-2 sm:flex-row sm:items-start sm:gap-12">
         <div className="flex flex-col">
-          <Image
-            src={"/images/" + project?.card_image}
-            alt="Mads Kristensen"
-            width={400}
-            height={400}
-            className="w-full rounded-lg"
-          />
+          <div className="overflow-hidden rounded-lg">
+            <Image
+              src={"/images/" + project?.card_image}
+              alt="Mads Kristensen"
+              width={400}
+              height={400}
+              className="w-full scale-[130%]"
+            />
+          </div>
           <div className="mt-4 flex justify-center gap-4 sm:justify-start">
             <div className="flex items-center gap-5 rounded-md bg-slate-700 p-3">
               {project?.techstack_icons.map((icon, index) => (
@@ -115,9 +118,10 @@ export default function ProjectPage({ params }: Params) {
         </div>
       </div>
       <div className="mt-10">
-        <p className="xs:text-base whitespace-pre-wrap text-sm text-white/80">
-          {project?.long_description}
-        </p>
+        <p
+          dangerouslySetInnerHTML={{ __html: project?.long_description }}
+          className="whitespace-pre-wrap text-sm text-white/90 xs:text-base"
+        ></p>
       </div>
       <div className="mt-8 w-full">
         <MediaGallery mediaItems={mediaItems} />

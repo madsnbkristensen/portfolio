@@ -4,16 +4,17 @@ import { useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-interface MediaItem {
+type MediaItem = {
   id: number;
   type: "image" | "video";
   src: string;
   alt?: string;
-}
+  thumbnail?: string;
+};
 
-interface MediaGalleryProps {
+type MediaGalleryProps = {
   mediaItems: MediaItem[];
-}
+};
 
 export default function MediaGallery({ mediaItems }: MediaGalleryProps) {
   const [selectedItem, setSelectedItem] = useState<MediaItem>(mediaItems[0]);
@@ -41,11 +42,11 @@ export default function MediaGallery({ mediaItems }: MediaGalleryProps) {
                 className="object-cover"
               />
             ) : (
-              <video
-                src={item.src}
-                className="h-full w-full object-cover"
-                muted
-                playsInline
+              <Image
+                src={item.thumbnail || "/video-placeholder.svg"} // Use a placeholder image for video thumbnails
+                alt="Video thumbnail"
+                fill
+                className="object-cover"
               />
             )}
           </div>
@@ -59,16 +60,16 @@ export default function MediaGallery({ mediaItems }: MediaGalleryProps) {
             src={selectedItem.src || "/placeholder.svg"}
             alt={selectedItem.alt || ""}
             fill
-            className="object-cover"
+            className="object-contain"
             priority
           />
         ) : (
-          <video
+          <iframe
             src={selectedItem.src}
             className="h-full w-full object-cover"
-            controls
-            autoPlay
-            playsInline
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
           />
         )}
       </div>

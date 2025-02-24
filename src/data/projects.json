@@ -8,8 +8,8 @@
       "github": "",
       "website": "https://aveo.dk/gratis-hjemmeside-udkast/",
       "card_image": "aveo-adg-form.webp",
-      "image_2": "aveo-adg-draft.webp",
-      "image_3": "project1.jpg",
+      "image_2": "aveo-adg-draft-1.webp",
+      "image_3": "aveo-adg-draft-2.webp",
       "techstack": ["PHP", "JavaScript", "Wordpress"],
       "techstack_description": [
         "PHP is the main language used for the backend of the project, where it handles the API requests and the data handling, aswell as the dynamic content on the design draft, based on the response from the OpenAI API.",
@@ -17,18 +17,19 @@
         "WordPress powers the Design Draft Generator, ensuring seamless integration with the Aveo.dk website. Developed as a dedicated plugin, it simplifies version management, deployment, and maintenance, allowing me and the development team to ensure continuous improvements and optimal performance."
       ],
       "techstack_icons": ["php.svg", "js.svg", "wp.svg"],
-      "video": "https://www.youtube.com/watch?v=J2X5mJ3HDYE"
+      "video": "https://www.youtube.com/embed/0cnztwSfGwA",
+      "thumbnail": "aveo-adg-thumbnail.webp"
     },
     {
       "id": 2,
       "title": "ResBook",
       "description": "ResBook is an online booking platform, created as a final project during the 5th semester at Business Academy Aarhus.",
-      "long_description": "ResBook is a restaurant booking system developed by my team and me as our final project during the 5th semester at Business Academy Aarhus. It enables users to easily book tables at restaurants while providing restaurant owners with an efficient booking management system.\n\nKey Features & Technologies:\n\nAdvanced Authentication: A key feature of ResBook is its custom-built authentication system, leveraging session tokens and Next.js middleware to ensure a secure and scalable authentication flow. Watch the video below to learn more about our implementation.\n\nDual Frontends for Seamless Experience: The system includes two dedicated frontends—one for users, built with Next.js for a smooth booking experience, and one for restaurants, developed in Remix to provide an intuitive booking management interface.\n\nRobust Backend & Deployment: The dedicated backend is developed using PHP and powered by a MySQL database for efficient data handling. The frontends are deployed on Vercel, while the backend runs on a PHP server provided by Simply, to ensure reliability and performance.",
-      "github": "https://github.com",
+      "long_description": "ResBook is a restaurant booking system developed by my team and me as our final project during the 5th semester at Business Academy Aarhus. It enables users to easily book tables at restaurants while providing restaurant owners with an efficient booking management system.\n\n<strong>Key Features & Technologies:</strong>\n\n<strong>Advanced Authentication:</strong> A key feature of ResBook is its custom-built authentication system, leveraging session tokens and Next.js middleware to ensure a secure and scalable authentication flow. Watch the video below to learn more about our implementation.\n\n<strong>Dual Frontends for Seamless Experience:</strong> The system includes two dedicated frontends—one for users, built with Next.js for a smooth booking experience, and one for restaurants, developed in Remix to provide an intuitive booking management interface.\n\n<strong>Robust Backend & Deployment:</strong> The dedicated backend is developed using PHP and powered by a MySQL database for efficient data handling. The frontends are deployed on Vercel, while the backend runs on a PHP server provided by Simply, to ensure reliability and performance.",
+      "github": "https://github.com/eaaa-dob-wu-e24a/RESBOOK",
       "website": "https://resbook.vercel.app/",
       "card_image": "resbook-iphone.webp",
       "image_2": "resbook-booking.webp",
-      "image_3": "project1.jpg",
+      "image_3": "resbook-card-image.webp",
       "techstack": ["Next.js", "PHP", "Remix", "GitHub Projects / Git"],
       "techstack_description": [
         "Used to build the user-facing frontend of ResBook, ensuring a fast and smooth booking experience. It was chosen for its server-side rendering (SSR) capabilities, API routes, and middleware, which played a key role in implementing a secure authentication system.",
@@ -40,24 +41,8 @@
         "Used to organize and manage the development process, ensuring smooth collaboration within the team. Feature branches and pull requests were utilized to maintain code quality and streamline the workflow. Alongside GitHub Projects, we used Git for version control."
       ],
       "techstack_icons": ["php.svg", "next.svg", "remix.svg", "git.svg"],
-      "video": "https://www.youtube.com/watch?v=J2X5mJ3HDYE"
-    },
-    {
-      "id": 3,
-      "title": "Project 3",
-      "github": "https://github.com",
-      "website": "https://aveo.dk/gratis-hjemmeside-udkast/",
-      "card_image": "adg-card-image.webp",
-      "image_2": "adg-card-image.webp",
-      "image_3": "adg-card-image.webp",
-      "techstack": ["PHP", "JavaScript", "Wordpress"],
-      "techstack_description": [
-        "PHP is a server-side scripting language designed for web development but also used as a general-purpose programming language.",
-        "JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification.",
-        "WordPress is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database."
-      ],
-      "techstack_icons": ["php.png", "javascript.png", "wordpress.png"],
-      "video": "https://www.youtube.com/watch?v=J2X5mJ3HDYE"
+      "video": "https://www.youtube.com/embed/b1jvUvpvDiE",
+      "thumbnail": "resbook-thumbnail.webp"
     }
   ]
 }
