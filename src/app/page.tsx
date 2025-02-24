@@ -95,20 +95,21 @@ export default function Home() {
         <div className="mt-4 flex flex-col-reverse items-start gap-8 sm:flex-row">
           <div className="flex flex-col gap-6 text-center text-base leading-relaxed text-white/90 sm:text-start">
             <p>
-              Hey there! I'm a 24-year-old web developer based in Aarhus with a
-              strong passion for backend development.
+              Hey there! I&#39;m a 24-year-old web developer based in Aarhus
+              with a strong passion for backend development.
             </p>
             <p>
               In the summer of 2024, I graduated as a Multimedia Designer
               specializing in frontend development from Business Academy Aarhus.
-              Currently, I'm furthering my studies with a PBA in Web Development
-              at the same institution. Through this program, I've discovered my
-              deep interest in backend and system development, where I truly
-              enjoy designing well-structured, scalable, and efficient systems.
+              Currently, I&#39;m furthering my studies with a PBA in Web
+              Development at the same institution. Through this program,
+              I&#39;ve discovered my deep interest in backend and system
+              development, where I truly enjoy designing well-structured,
+              scalable, and efficient systems.
             </p>
             <p>
-              Alongside my studies, I've been working as a web developer at Auxo
-              since January 2024, gaining valuable hands-on experience in
+              Alongside my studies, I&#39;ve been working as a web developer at
+              Auxo since January 2024, gaining valuable hands-on experience in
               building and maintaining digital solutions.
             </p>
             <p>
@@ -119,12 +120,12 @@ export default function Home() {
               more efficient and user-friendly systems.
             </p>
             <p>
-              I'm always eager to take on new challenges and continuously
-              improve my skills. Right now, I'm looking for an internship in
+              I&#39;m always eager to take on new challenges and continuously
+              improve my skills. Right now, I&#39;m looking for an internship in
               fall 2025, where I can further develop my expertise in backend and
-              web development. If you're looking for a motivated and dedicated
-              developer to join your team, feel free to reach out—I'm always
-              open for a chat!
+              web development. If you&#39;re looking for a motivated and
+              dedicated developer to join your team, feel free to reach
+              out—I&#39;m always open for a chat!
             </p>
           </div>
         </div>
