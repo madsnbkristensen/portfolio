@@ -13,7 +13,8 @@ import Link from "next/link";
 export type ProjectType = {
   id: number;
   title: string;
-  description?: string;
+  description: string;
+  long_description: string;
   github?: string;
   website?: string;
   card_image?: string;
@@ -80,6 +81,12 @@ export default function Home() {
               id={project.id}
               title={project.title}
               description={project.description}
+              github={project.github}
+              website={project.website}
+              long_description={project.long_description}
+              techstack={project.techstack}
+              techstack_description={project.techstack_description}
+              techstack_icons={project.techstack_icons}
               card_image={project.card_image}
             />
           ))}

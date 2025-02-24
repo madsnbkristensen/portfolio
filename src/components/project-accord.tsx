@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-interface AccordionData {
+export type AccordionData = {
   id: string;
   title: string;
   content: string;

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-type MediaItem = {
+export type MediaItem = {
   id: number;
   type: "image" | "video";
   src: string;
@@ -12,7 +12,7 @@ type MediaItem = {
   thumbnail?: string;
 };
 
-type MediaGalleryProps = {
+export type MediaGalleryProps = {
   mediaItems: MediaItem[];
 };
 
