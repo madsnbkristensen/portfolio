@@ -29,7 +29,7 @@ export const Slider = () => {
   }, [api, current]);
 
   const logos = [
-    { src: "/logos/c-sharp.svg", title: "C#" },
+    //{ src: "/logos/c-sharp.svg", title: "C#" },
     { src: "/logos/node.svg", title: "Node.js" },
     { src: "/logos/next.svg", title: "Next.js" },
     { src: "/logos/php.svg", title: "PHP" },
