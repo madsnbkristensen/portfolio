@@ -61,7 +61,7 @@ export default function Navbar() {
         {/* Center section - Navigation */}
         <div className="flex items-center gap-2">
           <div className="hidden sm:block">
-            <FontAwesomeIcon icon={faPhone} size="lg" />
+            <FontAwesomeIcon className="text-yellow-400" icon={faPhone} size="lg" />
           </div>
           <span className="text-sm sm:text-base">+45 41 81 94 50</span>
         </div>
@@ -69,7 +69,7 @@ export default function Navbar() {
         {/* Right section - Settings */}
         <div className="flex items-center gap-2">
           <div className="hidden sm:block">
-            <FontAwesomeIcon icon={faEnvelope} size="lg" />
+            <FontAwesomeIcon className="text-yellow-400" icon={faEnvelope} size="lg" />
           </div>
           <span className="text-sm md:text-base">
             madskristensen@hotmail.dk

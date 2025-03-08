@@ -39,15 +39,19 @@ export default function Home() {
         <div>
           <div>
             <Title text="Mads Kristensen" tag="h1" />
-            <p className="mt-1 px-10 text-center text-lg text-white/80 xs:mt-4 xs:px-0 xs:text-start xs:text-2xl">
-              - Web developer with a passion for backend and system development
+            <p className="mt-1 px-10 text-center text-lg text-white/80 xs:mt-4 xs:px-0 xs:text-start xs:text-xl">
+              - Fullstack developer with a passion for backend and system
+              development
             </p>
           </div>
           <div className="mt-4 flex justify-center gap-6 xs:mt-8 xs:justify-start xs:gap-12">
             <Link href="#projects">
               <Button className="w-28 bg-slate-800 hover:bg-slate-700">
                 Projects
-                <FontAwesomeIcon icon={faChevronDown} className="ml-1" />
+                <FontAwesomeIcon
+                  icon={faChevronDown}
+                  className="ml-1 text-yellow-400"
+                />
               </Button>
             </Link>
             <Link href="#about">
@@ -66,7 +70,7 @@ export default function Home() {
         />
       </section>
       <section className="mt-14 flex w-full flex-col items-center xs:mt-20">
-        <Title text="TechStack" tag="h2" />
+        <Title text="Tech arsenal" tag="h2" />
         <Slider />
       </section>
       <section
@@ -102,37 +106,63 @@ export default function Home() {
         <div className="mt-4 flex flex-col-reverse items-start gap-8 sm:flex-row">
           <div className="flex flex-col gap-6 text-center text-base leading-relaxed text-white/90 sm:text-start">
             <p>
-              Hey there! I&#39;m a 24-year-old web developer based in Aarhus
-              with a strong passion for backend development.
+              Hey there! I&#39;m a 24-year-old{" "}
+              <span className="font-bold text-yellow-400">
+                fullstack developer
+              </span>{" "}
+              based in Aarhus, currently studying Web Development.
+            </p>
+            <p>
+              I build scalable systems and aplications with a various of
+              techstacks, but mostly using{" "}
+              <span className="font-bold text-yellow-400">
+                Node.js (TypeScript)
+              </span>
+              , <span className="font-bold text-yellow-400">Express.js</span>{" "}
+              and <span className="font-bold text-yellow-400">Next.js</span>. I
+              am currently exploring and trying to learn{" "}
+              <span className="font-bold text-yellow-400">C# with .NET</span>.
             </p>
             <p>
               In the summer of 2024, I graduated as a Multimedia Designer
               specializing in frontend development from Business Academy Aarhus.
-              Currently, I&#39;m furthering my studies with a PBA in Web
-              Development at the same institution. Through this program,
-              I&#39;ve discovered my deep interest in backend and system
-              development, where I truly enjoy designing well-structured,
-              scalable, and efficient systems.
+              Now, I&#39;m furthering my studies with a{" "}
+              <span className="font-bold text-yellow-400">
+                PBA in Web Development
+              </span>{" "}
+              at the same institution. Through this program, I&#39;ve discovered
+              my deep interest in backend and system development, where I truly
+              enjoy designing well-structured, scalable, and efficient systems.
             </p>
             <p>
-              Alongside my studies, I&#39;ve been working as a web developer at
-              Auxo since January 2024, gaining valuable hands-on experience in
-              building and maintaining digital solutions.
-            </p>
-            <p>
-              My background in frontend development has given me a strong
-              understanding of the full development process, allowing me to
-              create seamless integrations between frontend and backend. This
-              has been a great advantage in my backend work, helping me develop
-              more efficient and user-friendly systems.
+              Alongside my studies, I&#39;ve been working as a{" "}
+              <span className="font-bold text-yellow-400">web developer</span>{" "}
+              at
+              <span className="font-bold text-yellow-400 underline">
+                {" "}
+                <a href="https://auxo.dk/" target="_blank">
+                  Auxo
+                </a>
+              </span>{" "}
+              , in the{" "}
+              <span className="font-bold text-yellow-400 underline">
+                {" "}
+                <a href="https://aveo.dk/" target="_blank">
+                  Aveo
+                </a>
+              </span>{" "}
+              department (subbrand), since January 2024, gaining valuable
+              hands-on experience in building and maintaining digital solutions.
             </p>
             <p>
               I&#39;m always eager to take on new challenges and continuously
-              improve my skills. Right now, I&#39;m looking for an internship in
-              fall 2025, where I can further develop my expertise in backend and
-              web development. If you&#39;re looking for a motivated and
-              dedicated developer to join your team, feel free to reach
-              out—I&#39;m always open for a chat!
+              improve my skills. Right now, I&#39;m looking for an{" "}
+              <span className="font-bold text-yellow-400">internship</span> in
+              <span className="font-bold text-yellow-400"> fall 2025</span>,
+              where I can further develop my expertise in backend and web
+              development. If you&#39;re looking for a motivated and dedicated
+              developer to join your team, feel free to reach out—I&#39;m always
+              open for a chat!
             </p>
           </div>
         </div>
